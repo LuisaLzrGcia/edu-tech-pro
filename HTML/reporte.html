@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="../IMG/logo.png" type="image/x-icon">
+  <title>Reporte</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../CSS/style.css" />
+</head>
+
+<body class="">
+  <nav id="nav-reporte">
+    <div class="navegador-reporte">
+      <div class="nav-logo">
+        <img class="logo" src="../IMG/logo.png" alt="DG-Check" />
+        <div class="name-logo">DG-Check</div>
+      </div>
+      <div class="nav-reporte">
+        Reporte de competencias digitales docentes | DigCompEdu
+      </div>
+    </div>
+  </nav>
+  <main class="container-fluid contenedor">
+    <div class="caja sombra-caja" id="body-reporte">
+      <div class="text-reporte">
+        El Marco Europeo para la Competencia Digital de los Educadores (DigCompEdu) responde a la creciente
+        concienciación de muchos Estados miembros europeos de que los educadores necesitan un conjunto de competencias
+        digitales específicas para su profesión, con el fin de poder aprovechar el potencial de las tecnologías
+        digitales para mejorar e innovar en educación.
+      </div>
+      <div class="cuerpo-seccion" style="font-size: 20px; text-align: center;">
+        <img src="../IMG/Estructura DigCompEdu.png" alt="" srcset="" width="100%">
+      </div>
+      <hr class="border border-2 opacity-50" style="border: 1px solid #DCDDE0;">
+      <div class="centrar" style="font-size: 40px; padding: 0px; font-weight: bolder;">
+        Resultados
+      </div>
+      <br>
+      <div class="container text-center">
+        <!--PRIMERA FILA-->
+        <div class="row">
+          <div class="col">
+            <div id="resulArea1">
+              <h2> Área 1: Compromiso profesional</h2>
+              <div class="cajaResul">
+                <div class="canvaArea">
+                  <canvas id="graficoArea1"></canvas>
+                </div>
+                <div id="infoArea1">
+                  <div class="nivelResul">
+                    <div>NIVEL: </div>
+                    <div id="nivelArea1"></div>
+                  </div>
+                  <div id="dataArea1"></div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div id="resulArea2">
+              <h2> Área 2: Contenidos digitales</h2>
+              <div class="cajaResul">
+                <div class="canvaArea">
+                  <canvas id="graficoArea2"></canvas>
+                </div>
+                <div id="infoArea1">
+                  <div class="nivelResul">
+                    <div>NIVEL: </div>
+                    <div id="nivelArea2"></div>
+                  </div>
+                  <div id="dataArea2"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--SEGUNDA FILA-->
+        <div class="row">
+          <div class="col">
+            <div>
+              <h2> Área 3: Enseñanza y aprendizaje</h2>
+              <div class="cajaResul">
+                <div class="canvaArea">
+                  <canvas id="graficoArea3"></canvas>
+                </div>
+                <div id="infoArea3">
+                  <div class="nivelResul">
+                    <div>NIVEL: </div>
+                    <div id="nivelArea3"></div>
+                  </div>
+                  <div id="dataArea3"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div>
+              <h2> Área 4: Evaluación y retroalimentación</h2>
+              <div class="cajaResul">
+                <div class="canvaArea">
+                  <canvas id="graficoArea4"></canvas>
+                </div>
+                <div id="infoArea4">
+                  <div class="nivelResul">
+                    <div>NIVEL: </div>
+                    <div id="nivelArea4"></div>
+                  </div>
+                  <div id="dataArea4"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--TERCERA FILA-->
+        <div class="row">
+          <div class="col">
+            <div>
+              <h2> Área 5: Empoderamiento de los estudiante</h2>
+              <div class="cajaResul">
+                <div class="canvaArea">
+                  <canvas id="graficoArea5"></canvas>
+                </div>
+                <div id="infoArea5">
+                  <div class="nivelResul">
+                    <div>NIVEL: </div>
+                    <div id="nivelArea5"></div>
+                  </div>
+                  <div id="dataArea5"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div>
+              <h2> Área 6: Evaluación y retroalimentación</h2>
+              <div class="cajaResul">
+                <div class="canvaArea">
+                  <canvas id="graficoArea6"></canvas>
+                </div>
+                <div id="infoArea6">
+                  <div class="nivelResul">
+                    <div>NIVEL: </div>
+                    <div id="nivelArea6"></div>
+                  </div>
+                  <div id="dataArea6"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--RESULTADO GENERAL-->
+        <div class="cajaGral">
+          <h2 class="pb-1"> Resultado general</h2>
+          <div class="resulGral">
+            <div class="resulGral w-75">
+              <div class="d-flex justify-content-end">
+                <div class="cajaResul">
+                  <div class="canvaAreaGral">
+                    <canvas id="graficoAreaGral"></canvas>
+                  </div>
+                </div>
+              </div>
+              <div class="">
+                <div id="infoAreaGral w-100 d-flex" style="text-align: justify;">
+                  <div>
+                    <div class="nivelResul">
+                      <div>NIVEL: </div>
+                      <div id="nivelAreaGral"></div>
+                    </div>
+                    <div id="dataAreaGral" class="pb-1"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <div style="display: flex; justify-content: space-between; padding: 0px 30vw;">
+    <a id="bttnA1" data-bs-toggle="modal" onclick="toPDF()" role="button" class="noLink">
+      <div class="btn-analizar d-flex justify-content-center py-5">
+        <button type="button" class="btn btn-info centrar">
+          <div class="centrar">
+            <div class="pe-1">
+              Descargar reporte en PDF
+            </div>
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-file-earmark-pdf-fill" viewBox="0 0 16 16">
+                <path
+                  d="M5.523 12.424c.14-.082.293-.162.459-.238a7.878 7.878 0 0 1-.45.606c-.28.337-.498.516-.635.572a.266.266 0 0 1-.035.012.282.282 0 0 1-.026-.044c-.056-.11-.054-.216.04-.36.106-.165.319-.354.647-.548zm2.455-1.647c-.119.025-.237.05-.356.078a21.148 21.148 0 0 0 .5-1.05 12.045 12.045 0 0 0 .51.858c-.217.032-.436.07-.654.114zm2.525.939a3.881 3.881 0 0 1-.435-.41c.228.005.434.022.612.054.317.057.466.147.518.209a.095.095 0 0 1 .026.064.436.436 0 0 1-.06.2.307.307 0 0 1-.094.124.107.107 0 0 1-.069.015c-.09-.003-.258-.066-.498-.256zM8.278 6.97c-.04.244-.108.524-.2.829a4.86 4.86 0 0 1-.089-.346c-.076-.353-.087-.63-.046-.822.038-.177.11-.248.196-.283a.517.517 0 0 1 .145-.04c.013.03.028.092.032.198.005.122-.007.277-.038.465z" />
+                <path fill-rule="evenodd"
+                  d="M4 0h5.293A1 1 0 0 1 10 .293L13.707 4a1 1 0 0 1 .293.707V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zm5.5 1.5v2a1 1 0 0 0 1 1h2l-3-3zM4.165 13.668c.09.18.23.343.438.419.207.075.412.04.58-.03.318-.13.635-.436.926-.786.333-.401.683-.927 1.021-1.51a11.651 11.651 0 0 1 1.997-.406c.3.383.61.713.91.95.28.22.603.403.934.417a.856.856 0 0 0 .51-.138c.155-.101.27-.247.354-.416.09-.181.145-.37.138-.563a.844.844 0 0 0-.2-.518c-.226-.27-.596-.4-.96-.465a5.76 5.76 0 0 0-1.335-.05 10.954 10.954 0 0 1-.98-1.686c.25-.66.437-1.284.52-1.794.036-.218.055-.426.048-.614a1.238 1.238 0 0 0-.127-.538.7.7 0 0 0-.477-.365c-.202-.043-.41 0-.601.077-.377.15-.576.47-.651.823-.073.34-.04.736.046 1.136.088.406.238.848.43 1.295a19.697 19.697 0 0 1-1.062 2.227 7.662 7.662 0 0 0-1.482.645c-.37.22-.699.48-.897.787-.21.326-.275.714-.08 1.103z" />
+              </svg>
+            </div>
+          </div>
+        </button>
+      </div>
+    </a>
+
+    <a id="bttnA1" data-bs-toggle="modal" onclick="toHome()" role="button" class="noLink">
+      <div class="btn-analizar d-flex justify-content-center py-5">
+        <button type="button" class="btn btn-info centrar">
+          <div class="centrar">
+            <div class="pe-1">
+              Regresar al inicio
+            </div>
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-house-fill" viewBox="0 0 16 16">
+                <path
+                  d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z" />
+                <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Z" />
+              </svg>
+            </div>
+          </div>
+        </button>
+      </div>
+    </a>
+  </div>
+
+  <div id="reporte" class="noShow" style="padding-left: 1rem; padding-right: 1rem; background-color: white;"
+    class="container text-center">
+    <nav id="nav-reporte" style="background-color: white; filter: none;">
+      <div class="navegador-reporte" style="margin: 0px;">
+        <div class="nav-logo">
+          <img class="logo" src="../IMG/logo.png" alt="DG-Check" />
+          <div class="name-logo" style="font-size: 25px;">DG-Check</div>
+        </div>
+        <div class="nav-reporte" style="font-size: 25px;">
+          Reporte de competencias digitales docentes | DigCompEdu
+        </div>
+      </div>
+    </nav>
+    <div style="font-size: 0.8rem; text-align: justify; font-family: 'Roboto', sans-serif; padding-bottom: 0.5rem;">
+      El Marco Europeo para la Competencia Digital de los Educadores (DigCompEdu) responde a la creciente
+      concienciación de muchos Estados miembros europeos de que los educadores necesitan un conjunto de
+      competencias digitales específicas para su profesión, con el fin de poder aprovechar el potencial de las
+      tecnologías digitales para mejorar e innovar en educación.
+    </div>
+    <div class="cuerpo-seccion" style="font-size: 20px; text-align: center; margin: 0px;">
+      <img src="../IMG/Estructura-DigComEdu-e1571642020814-1024x418.png" alt="" srcset="" style="width: 100%;">
+    </div>
+    <hr>
+    <div
+      style="font-size: 1.3rem; font-weight: bolder; font-family: 'Roboto', sans-serif; display: flex; justify-content: center; padding-bottom: 1rem;">
+      R E S U L T A D O S
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div style="
+        font-size: 1.3rem; 
+        font-weight: bolder; 
+        font-family: 'Roboto', sans-serif; 
+        display: flex; 
+        justify-content: center; 
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;">
+          Área 1: Compromiso profesional
+        </div>
+        <div
+          style="font-family: 'Roboto', sans-serif; font-size: 1rem; display: flex; justify-content: center; align-items: center;">
+          Nivel: <span id="nivel1" style="color: #0D3E5F; font-size: 1.2rem; font-weight: bold;"></span></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3">
+        <div id="canva1" style="height: 80px;"></div>
+      </div>
+      <div class="col-9" id="reporteArea1">
+        <div id="resulA1" style="text-align: justify !important; font-family: 'Roboto', sans-serif; font-size: 0.8rem;">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div style="
+        font-size: 1.3rem; 
+        font-weight: bolder; 
+        font-family: 'Roboto', sans-serif; 
+        display: flex; 
+        justify-content: center; 
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;">
+          Área 2.: Contenidos digitales
+        </div>
+        <div
+          style="font-family: 'Roboto', sans-serif; font-size: 1rem; display: flex; justify-content: center; align-items: center;">
+          Nivel: <span id="nivel2" style="color: #0D3E5F; font-size: 1.2rem; font-weight: bold;"></span></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3">
+        <div id="canva2" style="height: 80px;"></div>
+      </div>
+      <div class="col-9">
+        <div id="resulA2" style="text-align: justify !important; font-family: 'Roboto', sans-serif; font-size: 0.8rem;">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div style="
+        font-size: 1.3rem; 
+        font-weight: bolder; 
+        font-family: 'Roboto', sans-serif; 
+        display: flex; 
+        justify-content: center; 
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;">
+          Área 3: Enseñanza y aprendizaje
+        </div>
+        <div
+          style="font-family: 'Roboto', sans-serif; font-size: 1rem; display: flex; justify-content: center; align-items: center;">
+          Nivel: <span id="nivel3" style="color: #0D3E5F; font-size: 1.2rem; font-weight: bold;"></span></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3">
+        <div id="canva3" style="height: 80px;"></div>
+      </div>
+      <div class="col-9">
+        <div id="resulA3" style="text-align: justify !important; font-family: 'Roboto', sans-serif; font-size: 0.8rem;">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div style="
+        font-size: 1.3rem; 
+        font-weight: bolder; 
+        font-family: 'Roboto', sans-serif; 
+        display: flex; 
+        justify-content: center; 
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;">
+          Área 4: Evaluación y retroalimentación
+        </div>
+        <div
+          style="font-family: 'Roboto', sans-serif; font-size: 1rem; display: flex; justify-content: center; align-items: center;">
+          Nivel: <span id="nivel4" style="color: #0D3E5F; font-size: 1.2rem; font-weight: bold;"></span></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3">
+        <div id="canva4" style="height: 80px;"></div>
+      </div>
+      <div class="col-9">
+        <div style="display: inline-block;">
+        </div>
+        <div id="resulA4" style="text-align: justify !important; font-family: 'Roboto', sans-serif; font-size: 0.8rem;">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div style="
+        font-size: 1.3rem; 
+        font-weight: bolder; 
+        font-family: 'Roboto', sans-serif; 
+        display: flex; 
+        justify-content: center; 
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;">
+          Área 5: Empoderamiento de los estudiante
+        </div>
+        <div
+          style="font-family: 'Roboto', sans-serif; font-size: 1rem; display: flex; justify-content: center; align-items: center;">
+          Nivel: <span id="nivel5" style="color: #0D3E5F; font-size: 1.2rem; font-weight: bold;"></span></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3">
+        <div id="canva5" style="height: 80px;"></div>
+      </div>
+      <div class="col-9">
+        <div id="resulA5" style="text-align: justify !important; font-family: 'Roboto', sans-serif; font-size: 0.8rem;">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div style="
+        font-size: 1.3rem; 
+        font-weight: bolder; 
+        font-family: 'Roboto', sans-serif; 
+        display: flex; 
+        justify-content: center; 
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;">
+          Área 6: Evaluación y retroalimentación
+        </div>
+        <div
+          style="font-family: 'Roboto', sans-serif; font-size: 1rem; display: flex; justify-content: center; align-items: center;">
+          Nivel: <span id="nivel6" style="color: #0D3E5F; font-size: 1.2rem; font-weight: bold;"></span></div>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3">
+        <div id="canva6" style="height: 80px;"></div>
+      </div>
+      <div class="col-9">
+        <div id="resulA6" style="text-align: justify !important; font-family: 'Roboto', sans-serif; font-size: 0.8rem;">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div style="
+        font-size: 1.3rem; 
+        font-weight: bolder; 
+        font-family: 'Roboto', sans-serif; 
+        display: flex; 
+        justify-content: center; 
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;">
+          General
+        </div>
+        <div
+          style="font-family: 'Roboto', sans-serif; font-size: 1rem; display: flex; justify-content: center; align-items: center;">
+          Nivel: <span id="nivelGral" style="color: #0D3E5F; font-size: 1.2rem; font-weight: bold;"></span></div>
+      </div>
+    </div>
+    <div class="row" style="padding-bottom: 2rem;">
+      <div class="col-3">
+        <div id="canvaGral" style="height: 80px;"></div>
+      </div>
+      <div class="col-9">
+        <div id="resulAGral"
+          style="text-align: justify !important; font-family: 'Roboto', sans-serif; font-size: 0.8rem;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../JS/grafics.js"></script>
+  <script src="../generarpdf/html2pdf.js"></script>
+
+  <script>
+    function toPDF() {
+      new Promise((resolve, reject) =>
+        resolve(jspdf())
+      ).then(resolve => ocultar())
+        .catch()
+
+    }
+
+    function ocultar() {
+      console.log("ocultar")
+      document.getElementById("reporte").classList.remove("show")
+      document.getElementById("reporte").classList.add("noShow")
+    }
+
+    function jspdf() {
+      console.log("jspdf")
+      document.getElementById("reporte").classList.remove("noShow")
+      document.getElementById("reporte").classList.add("show")
+      const date = new Date();
+      const fecha = `${date.getFullYear()} ${date.getMonth()} ${date.getDay()} ${date.getHours()}\:${date.getMinutes()}\:${date.getMilliseconds()}`
+      const $elementoParaConvertir = document.getElementById("reporte"); // <-- Aquí puedes elegir cualquier elemento del DOM
+      html2pdf()
+        .set({
+          margin: 0.1,
+          filename: `Reporte de competencias digitales docentes_ ${fecha}.pdf`,
+          image: {
+            type: 'jpeg',
+            quality: 0.98
+          },
+          html2canvas: {
+            scale: 3, // A mayor escala, mejores gráficos, pero más peso
+            letterRendering: true,
+          },
+          jsPDF: {
+            unit: "in",
+            format: "letter",
+            orientation: 'portrait' // landscape o portrait
+          }
+        })
+        .from($elementoParaConvertir)
+        .save()
+        .catch(err => console.log(err));
+    }
+    function toHome() {
+      window.location.replace("../index.html")
+    }
+
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const area1 = [
+        [
+          "Poco uso de las tecnologías digitales para la comunicación.",
+          "Poco uso de las tecnologías digitales para la colaboración.",
+          "Inseguridad acerca de las propias necesidades de desarrollo.",
+          "Poco uso de Internet para actualizar conocimientos."
+        ],
+        [
+          "Conocimiento y uso básico de las tecnologías digitales para la comunicación.",
+          "Conocimiento y uso básico de las tecnologías digitales para la colaboración.",
+          "Sensibilización sobre las propias necesidades de desarrollo.",
+          "Uso de Internet para actualizar conocimientos."
+        ],
+        [
+          "Uso eficaz y responsable de las tecnologías digitales para la comunicación.",
+          "Uso de las tecnologías digitales para compartir e intercambiar prácticas.",
+          "Uso de la experimentación y el aprendizaje entre compañeros como fuente de desarrollo.",
+          "Uso de Internet para identificar oportunidades para el DPC."
+        ],
+        [
+          "Uso de las tecnologías digitales para la comunicación de forma estructurada y receptiva.",
+          "Uso de las tecnologías digitales para la construcción colaborativa de conocimiento.",
+          "Utilización de una serie de recursos para desarrollar las propias prácticas digitales y pedagógicas individuales.",
+          "Búsqueda de oportunidades de DPC en línea."
+        ],
+        [
+          "Evaluación y discusión de las estrategias de comunicación.",
+          "Uso de las tecnologías digitales para reflexionar sobre las prácticas y competencias y mejorarlas.",
+          "Reflexión y mejora de la práctica pedagógica en general mediante la colaboración.",
+          "Uso crítico y estratégico de Internet para el DPC."
+        ],
+        [
+          "Reflexión y rediseño de estrategias de comunicación.",
+          "Uso de las tecnologías digitales para promover la práctica innovadora.",
+          "Innovación de las políticas y prácticas educativas.",
+          "Uso de Internet para proporcionar DPC a otros compañeros."
+        ]
+      ]
+
+      const area2 = [
+        [
+          "Poco uso de Internet para buscar recursos.",
+          "Contención en la modificación de recursos digitales.",
+          "No se emplean estrategias para compartir contenidos."
+        ],
+        [
+          "Conocimiento y uso básico de las tecnologías digitales para buscar recursos.",
+          "Creación y modificación de recursos mediante herramientas y estrategias básicas.",
+          "Gestión de contenidos mediante estrategias básicas."
+        ],
+        [
+          "Localización y evaluación de los recursos adecuados utilizando criterios básicos.",
+          "Creación y modificación de recursos mediante algunas funciones avanzadas.",
+          "Protección eficaz de los contenidos mediante estrategias básicas."
+        ],
+        [
+          "Localización y evaluación de los recursos adecuados utilizando criterios complejos.",
+          "Adaptación de recursos digitales avanzados a un contexto de aprendizaje concreto.",
+          "Intercambio profesional de contenidos."
+        ],
+        [
+          "Localización y evaluación exhaustiva de los recursos adecuados teniendo en cuenta todos los aspectos relevantes.",
+          "Creación (de forma individual o en colaboración con otros) y modificación de recursos, según el contexto de aprendizaje, utilizando diversas estrategias avanzadas.",
+          "Publicación digital de recursos de creación propia."
+        ],
+        [
+          "Fomento del uso de los recursos digitales en la educación.",
+          "Publicación profesional de contenidos digitales de creación propia",
+          "Creación de recursos digitales complejos, interactivos."
+        ]
+      ]
+
+      const area3 = [
+        [
+          "Poco uso de las tecnologías digitales para la enseñanza.",
+          "Poco uso de las tecnologías digitales para interactuar con los estudiantes.",
+          "Poco uso de las tecnologías digitales en las actividades de aprendizaje colaborativo.",
+          "Poco uso de las tecnologías digitales para el aprendizaje autorregulado."
+        ],
+        [
+          "Uso básico de las tecnologías digitales disponibles para la enseñanza.",
+          "Empleo de estrategias digitales básicas para interactuar con los estudiantes.",
+          "Incentivo a los estudiantes para utilizar las tecnologías digitales en sus actividades colaborativas.",
+          "Incentivo a los estudiantes para utilizar las tecnologías digitales en actividades de aprendizaje autorreguladas."
+        ],
+        [
+          "Integración significativa de las tecnologías digitales disponibles en el proceso de enseñanza Uso de las tecnologías digitales para mejorar la interacción con los estudiantes.",
+          "Implementación de tecnologías digitales en el diseño de actividades colaborativas.",
+          "Implementación de tecnologías digitales en el diseño de actividades de aprendizaje autorreguladas."
+        ],
+        [
+          "Utilización de las tecnologías digitales con el propósito de mejorar las estrategias pedagógicas.",
+          "Uso de las tecnologías digitales para mejorar el seguimiento y la orientación.",
+          "Uso de entornos digitales para apoyar el aprendizaje colaborativo.",
+          "Uso de entornos digitales para apoyar de forma integral el aprendizaje autorregulado."
+        ],
+        [
+          "Coordinación, seguimiento y adaptación flexible del uso de las tecnologías digitales para mejorar las estrategias pedagógicas.",
+          "Empleo de las tecnologías digitales de forma estratégica y deliberada para proporcionar orientación y apoyo.",
+          "Uso de entornos digitales para la generación de conocimientos en colaboración de los estudiantes y la evaluación entre pares.",
+          "Reflexión crítica sobre las estrategias digitales utilizadas para fomentar el aprendizaje autorregulado."
+        ],
+        [
+          "Uso de las tecnologías digitales para innovar en las estrategias de enseñanza.",
+          "Uso de las tecnologías digitales para innovar la prestación de orientación.",
+          "Uso de tecnologías digitales para innovar en las fórmulas de colaboración entre los estudiantes.",
+          "Desarrollo de nuevos formatos digitales y/o enfoques pedagógicos para el aprendizaje autorregulado."
+        ]
+      ]
+
+      const area4 = [
+        [
+          "Poco uso de las tecnologías digitales para la evaluación.",
+          "Poco uso de los datos digitales para la monitorización de los progresos realizados.",
+          "Poco uso de los datos digitales para la retroalimentación y la programación."
+        ],
+        [
+          "Integración de las tecnologías digitales en las estrategias de evaluación tradicionales.",
+          "Evaluación de datos básicos sobre la actividad y el rendimiento del alumnado.",
+          "Uso de las tecnologías digitales para configurar la retroalimentación."
+        ],
+        [
+          "Empleo y modificación de las herramientas y formatos de evaluación digital existentes.",
+          "Evaluación de diversos datos digitales para configurar la enseñanza.",
+          "Uso de las tecnologías digitales para proporcionar retroalimentación."
+        ],
+        [
+          "Utilización estratégica de diversos formatos digitales de evaluación.",
+          "Empleo estratégico de herramientas digitales para la generación de datos.",
+          "Uso de los datos digitales para mejorar la eficacia de la retroalimentación y el apoyo."
+        ],
+        [
+          "Selección, creación y adaptación de formatos de evaluación digital de forma integral y crítica.",
+          "Uso de datos digitales para reflexionar sobre los patrones de aprendizaje y las estrategias de enseñanza.",
+          "Uso de las tecnologías digitales para personalizar la retroalimentación y el apoyo."
+        ],
+        [
+          "Desarrollo de formatos de evaluación innovadores utilizando las tecnologías digitales.",
+          "Innovación en la generación y evaluación de datos.",
+          "Uso de los datos digitales para evaluar y mejorar la enseñanza."
+        ]
+      ]
+
+      const area5 = [
+        [
+          "Preocupación por la accesibilidad y la inclusión.",
+          "Desconocimiento del potencial de las tecnologías digitales para la personalización.",
+          "Poco uso de las tecnologías digitales para que los estudiantes se impliquen."
+        ],
+        [
+          "Sensibilización sobre los problemas de accesibilidad e inclusión.",
+          "Conocimiento del potencial de las tecnologías digitales para la personalización.",
+          "Uso de tecnologías digitales para captar el interés de los estudiantes."
+        ],
+        [
+          "Aproximación inicial a la accesibilidad y la inclusión.",
+          "Empleo de tecnologías digitales para la personalización.",
+          "Fomento del uso activo de las tecnologías digitales por parte de los estudiantes."
+        ],
+        [
+          "Posibilitar la accesibilidad y la inclusión.",
+          "Uso estratégico de diversas tecnologías digitales para la personalización.",
+          "Uso de tecnologías digitales para el compromiso activo de los estudiantes con la materia."
+        ],
+        [
+          "Mejora de la accesibilidad y la inclusión.",
+          "Implementación integral y crítica del aprendizaje diferenciado y personalizado.",
+          "Implementación integral y crítica de estrategias para el aprendizaje activo."
+        ],
+        [
+          "Innovación de las estrategias de accesibilidad e inclusión.",
+          "Innovación en las estrategias de personalización utilizando las tecnologías digitales.",
+          "Innovación en las estrategias digitales para el aprendizaje activo "
+        ]
+      ]
+
+      const area6 = [
+        [
+          "Poco uso de estrategias que potencien las competencias básicas de los estudiantes en materia de información.",
+          "Poco uso de estrategias que fomenten la comunicación y la colaboración digital de los estudiantes.",
+          "Poco uso de estrategias que fomenten la creación de contenido digital por parte de los estudiantes.",
+          "Poco uso de estrategias que fomentan el bienestar digital de los estudiantes.",
+          "Poco uso de estrategias que promuevan la resolución de problemas digitales por parte de los estudiantes."
+        ],
+        [
+          "Fomento del uso de las tecnologías digitales para la búsqueda de información por parte de los estudiantes.",
+          "Fomento del uso de las tecnologías digitales para la comunicación y la colaboración por parte de los estudiantes.",
+          "Fomento del uso de las tecnologías digitales para crear contenidos por parte de los estudiantes.",
+          "Fomento del uso de las tecnologías digitales de forma segura y responsable por parte de los estudiantes.",
+          "Fomento del uso de las tecnologías digitales por parte de los estudiantes para resolver problemas."
+        ],
+        [
+          "Implementación de actividades para el fomento de la alfabetización de los estudiantes en materia de información y medios de comunicación",
+          "Implementación de actividades que fomenten la comunicación digital y la colaboración de los estudiantes.",
+          "Implementación de actividades que fomenten la creación de contenidos digitales por parte de los estudiantes.",
+          "Implementación de medidas para garantizar el bienestar de los estudiantes",
+          "Implementación de actividades que fomentan la resolución de problemas digitales por parte de los estudiantes."
+        ],
+        [
+          "Uso estratégico de una serie de medidas pedagógicas para promover las competencias básicas de los estudiantes en materia de información y de alfabetización mediática.",
+          "Uso estratégico de una serie de medidas pedagógicas para fomentar la comunicación y la colaboración digital de los estudiantes.",
+          "Uso estratégico de una serie de medidas pedagógicas para fomentar la creación de contenido digital por parte de los estudiantes.",
+          "Apoyo al uso de las tecnologías digitales por parte de los estudiantes desde un punto de vista pedagógico para garantizar su bienestar Uso estratégico de una serie de medidas pedagógicas para fomentar la resolución de problemas digitales por parte de los estudiantes."
+        ],
+        [
+          "Promoción integral y crítica de la alfabetización de los estudiantes en materia de información y medios de comunicación.",
+          "Promoción integral y crítica de la comunicación y colaboración digital de los estudiantes.",
+          "Promoción integral y crítica de la creación de contenidos digitales por parte de los estudiantes.",
+          "Desarrollo estratégico y crítico del uso responsable y seguro de las tecnologías digitales por parte de los estudiantes.",
+          "Fomento integral y crítico de la resolución de problemas digitales por parte de los estudiantes."
+        ],
+        [
+          "Uso de formatos innovadores para fomentar la alfabetización de los estudiantes en materia de información y medios de comunicación.",
+          "Uso de formatos innovadores para fomentar la comunicación y la colaboración digital de los estudiantes.",
+          "Uso de formatos innovadores para fomentar la creación de contenidos digitales por parte de los estudiantes.",
+          "Desarrollo de enfoques innovadores para fomentar la capacidad de los estudiantes de utilizar las tecnologías digitales para su propio bienestar.",
+          "Uso de formatos innovadores para fomentar la resolución de problemas digitales por parte de los estudiantes."
+        ]
+      ]
+
+
+      const gral = [
+        [
+          "Los novatos son conscientes del potencial de las tecnologías digitales para mejorar la práctica pedagógica y profesional. Sin embargo, han tenido muy poco contacto con las tecnologías digitales y las utilizan principalmente para la preparación de las clases, las tareas administrativas o la comunicación organizativa. Los noveles necesitan orientación y estímulo para ampliar su repertorio y para aplicar la competencia digital que poseen en el ámbito pedagógico."
+        ],
+        [
+          "Los exploradores son conscientes del potencial de las tecnologías digitales y están interesados en explorarlas para mejorar la práctica pedagógica y profesional. Han comenzado a utilizar tecnologías digitales en algunas áreas de competencia digital sin seguir, no obstante, un enfoque integral o coherente. Los exploradores necesitan estímulo, perspectiva e inspiración, por ejemplo, a través del ejemplo y la orientación de los compañeros en el marco de un intercambio colaborativo de prácticas."
+        ],
+        [
+          "Los integradores prueban las tecnologías digitales en una variedad de contextos y con diversos propósitos, integrándolas en muchas de sus prácticas. Las utilizan de forma creativa para mejorar diversos aspectos de su compromiso profesional. Están deseosos de ampliar su repertorio de prácticas. Sin embargo, siguen trabajando en la comprensión de qué herramientas funcionan mejor en qué situaciones y en la adaptación de las tecnologías digitales a las estrategias y métodos pedagógicos. Para convertirse en expertos, los integradores solo necesitan un poco más de tiempo para la experimentación y la reflexión, complementado con el incentivo de la colaboración y el intercambio de conocimientos."
+        ],
+        [
+          "Los expertos utilizan diversas tecnologías digitales con confianza, de manera creativa y crítica para mejorar sus actividades profesionales. Seleccionan de forma específica tecnologías digitales para situaciones particulares y tratan de entender los beneficios e inconvenientes de las diferentes estrategias digitales. Son curiosos y están abiertos a ideas nuevas, sabiendo que hay muchas cosas que aún no han probado. Utilizan la experimentación como medio para ampliar, estructurar y consolidar su repertorio de estrategias. Los expertos son la columna vertebral de cualquier organización educativa cuando se trata de prácticas innovadoras."
+        ],
+        [
+          "Los líderes tienen un enfoque consistente e integral del uso de las tecnologías digitales para mejorar las prácticas pedagógicas y profesionales. Cuentan con un amplio repertorio de estrategias digitales de las que saben elegir la más adecuada para una situación determinada. Reflexionan continuamente sobre sus prácticas y las siguen desarrollando. Gracias al intercambio con otros compañeros, se mantienen actualizados sobre nuevos desarrollos e ideas. Son una fuente de inspiración para otros, a quienes transmiten su experiencia. "
+        ],
+        [
+          "Los pioneros cuestionan la idoneidad de las prácticas digitales y pedagógicas contemporáneas, en las que ellos mismos desempeñan el papel del líder. Están preocupados por las limitaciones o desventajas de estas prácticas y sienten la motivación de innovar aún más en educación. Los pioneros experimentan con tecnologías digitales altamente innovadoras y complejas y/o desarrollan enfoques pedagógicos novedosos. Son también una especie única e infrecuente. Lideran la innovación y son un modelo que seguir para docentes más jóvenes."
+        ]
+      ]
+
+      // AREA 1 ********************************************************************
+      const puntos1 = parseInt(localStorage.getItem("sumaArea1"))
+      const falta1 = 20 - puntos1
+      dibujarGrafica(1, puntos1, falta1, "#F07E31")
+      const nivel1 = localStorage.getItem("nivelArea1")
+      document.getElementById("nivelArea1").innerHTML =
+        `
+    &nbsp ${nivel1}
+    `
+      const item1 = getNivel(area1, nivel1)
+      localStorage.setItem("resul1", item1)
+      document.getElementById("dataArea1").innerHTML =
+        `
+    ${getLista(item1)}
+    `
+      localStorage.setItem("resulA1", document.getElementById("dataArea1").innerHTML)
+
+      // AREA 2 ********************************************************************
+      const puntos2 = parseInt(localStorage.getItem("sumaArea2"))
+      const falta2 = 15 - puntos2
+      dibujarGrafica(2, puntos2, falta2, "#2F9638")
+      const nivel2 = localStorage.getItem("nivelArea2")
+      document.getElementById("nivelArea2").innerHTML =
+        `
+    &nbsp ${nivel2}
+    `
+      const item2 = getNivel(area2, nivel2)
+      document.getElementById("dataArea2").innerHTML =
+        `
+    ${getLista(item2)}
+    `
+      localStorage.setItem("resulA2", document.getElementById("dataArea2").innerHTML)
+
+      // AREA 3 ********************************************************************
+      const puntos3 = parseInt(localStorage.getItem("sumaArea3"))
+      const falta3 = 20 - puntos3
+      dibujarGrafica(3, puntos3, falta3, "#4085C6")
+      const nivel3 = localStorage.getItem("nivelArea3")
+      document.getElementById("nivelArea3").innerHTML =
+        `
+    &nbsp ${nivel3}
+    `
+      const item3 = getNivel(area3, nivel3)
+      document.getElementById("dataArea3").innerHTML =
+        `
+    ${getLista(item3)}
+    `
+      localStorage.setItem("resulA3", document.getElementById("dataArea3").innerHTML)
+
+      // AREA 4 ********************************************************************
+      const puntos4 = parseInt(localStorage.getItem("sumaArea4"))
+      const falta4 = 15 - puntos4
+      dibujarGrafica(4, puntos4, falta4, "#00A3A3")
+      const nivel4 = localStorage.getItem("nivelArea4")
+      document.getElementById("nivelArea4").innerHTML =
+        `
+    &nbsp ${nivel4}
+    `
+      const item4 = getNivel(area4, nivel4)
+      document.getElementById("dataArea4").innerHTML =
+        `
+    ${getLista(item4)}
+    `
+      localStorage.setItem("resulA4", document.getElementById("dataArea4").innerHTML)
+
+      // AREA 5 ********************************************************************
+      const puntos5 = parseInt(localStorage.getItem("sumaArea5"))
+      const falta5 = 15 - puntos5
+      dibujarGrafica(5, puntos5, falta5, "#603881")
+      const nivel5 = localStorage.getItem("nivelArea5")
+      document.getElementById("nivelArea5").innerHTML =
+        `
+    &nbsp ${nivel5}
+    `
+      const item5 = getNivel(area5, nivel5)
+      document.getElementById("dataArea5").innerHTML =
+        `
+    ${getLista(item5)}
+    `
+      localStorage.setItem("resulA5", document.getElementById("dataArea5").innerHTML)
+
+      // AREA 6 ********************************************************************
+      const puntos6 = parseInt(localStorage.getItem("sumaArea6"))
+      const falta6 = 25 - puntos6
+      dibujarGrafica(6, puntos4, falta4, "#CF3558")
+      const nivel6 = localStorage.getItem("nivelArea6")
+      document.getElementById("nivelArea6").innerHTML =
+        `
+    &nbsp ${nivel6}
+    `
+      const item6 = getNivel(area6, nivel6)
+      document.getElementById("dataArea6").innerHTML =
+        `
+    ${getLista(item6)}
+    `
+      localStorage.setItem("resulA6", document.getElementById("dataArea6").innerHTML)
+
+
+      // AREA GENERAL **************************************************************
+      const puntos = parseInt(localStorage.getItem("sumaGral"))
+      const falta = 88 - puntos
+      dibujarGrafica("Gral", puntos, falta, "#003456")
+      const nivelGral = localStorage.getItem("nivelGral")
+      document.getElementById("nivelAreaGral").innerHTML =
+        `
+    &nbsp ${nivelGral}
+    `
+      const itemGral = getNivel(gral, nivelGral)
+      document.getElementById("dataAreaGral").innerHTML =
+        `
+    ${getLista(itemGral)}
+    `
+      localStorage.setItem("resulAGral", document.getElementById("dataAreaGral").innerHTML)
+
+      const canva1 = document.getElementById("graficoArea1");
+      canva1.toDataURL("image/jpeg", 1);
+      localStorage.setItem("urlCanva1", canva1.toDataURL())
+      localStorage.setItem("imageArea1", document.getElementById("resulArea1").innerHTML)
+      const canva1SRC = localStorage.getItem("urlCanva1");
+      console.log(canva1SRC)
+      document.getElementById("canva1").innerHTML = `<img src="${canva1SRC}" width="260px"  style= "margin-left:-50px"</img>`
+      document.getElementById("resulA1").innerHTML = `${localStorage.getItem("resulA1")}`;
+      document.getElementById("nivel1").innerHTML = `${localStorage.getItem("nivelArea1")}`;
+
+      const canva2 = document.getElementById("graficoArea2");
+      canva2.toDataURL("image/jpeg", 1);
+      localStorage.setItem("urlCanva2", canva2.toDataURL())
+      const canva2SRC = localStorage.getItem("urlCanva2");
+      console.log(canva2SRC)
+      document.getElementById("canva2").innerHTML = `<img src="${canva2SRC}" width="260px"  style= "margin-left:-50px"</img>`
+      document.getElementById("resulA2").innerHTML = `${localStorage.getItem("resulA2")}`;
+      document.getElementById("nivel2").innerHTML = `${localStorage.getItem("nivelArea2")}`;
+
+      const canva3 = document.getElementById("graficoArea3");
+      canva3.toDataURL("image/jpeg", 1);
+      localStorage.setItem("urlCanva3", canva3.toDataURL())
+      const canva3SRC = localStorage.getItem("urlCanva3");
+      console.log(canva3SRC)
+      document.getElementById("canva3").innerHTML = `<img src="${canva3SRC}" width="260px"  style= "margin-left:-50px" </img>`
+      document.getElementById("resulA3").innerHTML = `${localStorage.getItem("resulA3")}`;
+      document.getElementById("nivel3").innerHTML = `${localStorage.getItem("nivelArea3")}`;
+
+      const canva4 = document.getElementById("graficoArea4");
+      canva4.toDataURL("image/jpeg", 1);
+      localStorage.setItem("urlCanva4", canva4.toDataURL())
+      const canva4SRC = localStorage.getItem("urlCanva4");
+      console.log(canva4SRC)
+      document.getElementById("canva4").innerHTML = `<img src="${canva4SRC}" width="260px"  style= "margin-left:-50px"</img>`
+      document.getElementById("resulA4").innerHTML = `${localStorage.getItem("resulA4")}`;
+      document.getElementById("nivel4").innerHTML = `${localStorage.getItem("nivelArea4")}`;
+
+      const canva5 = document.getElementById("graficoArea5");
+      canva5.toDataURL("image/jpeg", 1);
+      localStorage.setItem("urlCanva5", canva5.toDataURL())
+      const canva5SRC = localStorage.getItem("urlCanva5");
+      console.log(canva5SRC)
+      document.getElementById("canva5").innerHTML = `<img src="${canva5SRC}" width="260px"  style= "margin-left:-50px" </img>`
+      document.getElementById("resulA5").innerHTML = `${localStorage.getItem("resulA5")}`;
+      document.getElementById("nivel5").innerHTML = `${localStorage.getItem("nivelArea5")}`;
+
+      const canva6 = document.getElementById("graficoArea6");
+      canva6.toDataURL("image/jpeg", 1);
+      localStorage.setItem("urlCanva6", canva6.toDataURL())
+      const canva6SRC = localStorage.getItem("urlCanva6");
+      console.log(canva6SRC)
+      document.getElementById("canva6").innerHTML = `<img src="${canva6SRC}" width="260px"  style= "margin-left:-50px" </img>`
+      document.getElementById("resulA6").innerHTML = `${localStorage.getItem("resulA6")}`;
+      document.getElementById("nivel6").innerHTML = `${localStorage.getItem("nivelArea6")}`;
+
+      const canvaGral = document.getElementById("graficoAreaGral");
+      canvaGral.toDataURL("image/jpeg", 1);
+      localStorage.setItem("urlCanvaGral", canvaGral.toDataURL())
+      const canvaGralSRC = localStorage.getItem("urlCanvaGral");
+      console.log(canvaGralSRC)
+      document.getElementById("canvaGral").innerHTML = `<img src="${canvaGralSRC}" width="260px"  style= "margin-left:-50px" </img>`
+      document.getElementById("resulAGral").innerHTML = `${localStorage.getItem("resulAGral")}`;
+      document.getElementById("nivelGral").innerHTML = `${localStorage.getItem("nivelGral")}`;
+
+
+    });
+
+    function getLista(arreglo) {
+      let cadena = ``
+      for (let index = 0; index < arreglo.length; index++) {
+        cadena += `<li>${arreglo[index]}</li>`
+
+      }
+      return cadena
+    }
+
+    function getNivel(area, nivel) {
+      let resul;
+      if (nivel == "Novato (A1)") {
+        resul = area[0]
+      } else if (nivel == "Explorador (A2)") {
+        resul = area[1]
+      } else if (nivel == "Integrador (B1)") {
+        resul = area[2]
+      } else if (nivel == "Experto (B2)") {
+        resul = area[3]
+      } else if (nivel == "Líder (C1)") {
+        resul = area[4]
+      } else {
+        resul = area[5]
+      }
+
+      return resul
+
+    }
+
+  </script>
+
+</body>
+
+</html>

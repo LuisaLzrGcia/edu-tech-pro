@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  background-color: #f2f3f4;
+}
+
+.caja-input:hover {
+  background-color: black;
+}
+
+.fondo-gris {
+  background-color: #f2f3f4;
+}
+
+.contenedor {
+  padding: 0px 50px;
+}
+
+.caja {
+  background-color: white;
+  margin-top: 30px;
+}
+
+.titulo-conte {
+  background-color: #003456;
+  color: white;
+}
+
+.noLink {
+  text-decoration: none;
+}
+
+/*
+div{
+    border: 1px solid black;
+}*/
+/* Estilos con boopstrap*/
+
+.grid-css {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(auto, 0.5fr);
+}
+
+.grid-opc {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.linea-abajo {
+  border-bottom: 1px solid gainsboro;
+}
+
+.seccion {
+  margin: 0px;
+}
+
+.cuerpo-seccion {
+  margin: 0px 150px;
+}
+
+nav {
+  padding: 5px 0px;
+  top: 0px;
+  filter: drop-shadow(0px 3px 5px gray);
+  z-index: 999;
+  background-color: #F6F7F8;
+  position: fixed;
+  width: 100%;
+}
+
+.nav-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+}
+
+.name-logo {
+  height: fit-content;
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.nav-reporte {
+  font-size: 1.875rem;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navegador {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0px 150px;
+}
+
+.navegador-reporte {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0px 50px;
+}
+
+/** Boton para hacer el cuestionario **/
+.nav-bttn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-bttn a button {
+  font-weight: bolder;
+  border: 3px solid #003456;
+  padding: 20px;
+}
+
+.nav-bttn>a>button:hover {
+  background-color: #003456;
+  color: #f2f3f4;
+  transition-duration: 600ms;
+}
+
+.cuerpo-seccion {
+  padding: 30px 0px;
+  display: flex;
+  font-size: 20px;
+}
+
+.centrar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.resaltar {
+  font-weight: bolder;
+  color: #0065A2;
+}
+
+footer {
+  background-color: #003456;
+  padding: 10px 0px;
+  color: white;
+}
+
+.sombra-bttn {
+  background-color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.sombra-caja {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+#fondo-index {
+  background-image: url("..//IMG/fondo.png");
+  background-size: cover;
+  height: 210px;
+  width: 100%;
+  margin-top: 90px;
+}
+
+#nav-reporte {
+  position: relative;
+}
+
+/**----------REPORTE----------**/
+
+.text-reporte {
+  padding: 20px 20px 0px 20px;
+  text-align: justify;
+  font-size: 1em;
+}
+
+.cajaResul {
+  display: flex;
+  justify-content: center;
+}
+
+.canvaArea {
+  width: 15vw;
+  height: 15vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: -15px;
+  padding: 0px;
+}
+
+.canvaAreaGral {
+  width: 20vw;
+  height: 20vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: -15px;
+  padding: 0px;
+}
+
+canvas {
+  padding: 0px;
+  margin: 0px;
+  width: fit-content;
+  height: 80%;
+}
+
+#infoArea1,
+#infoArea2,
+#infoArea3,
+#infoArea4,
+#infoArea5,
+#infoArea6 {
+  text-align: justify;
+  width: 60%;
+  padding-left: 10px;
+}
+
+#infoAreaGral {
+  text-align: justify;
+  width: 80%;
+  padding-left: 10px;
+}
+
+.nivelResul {
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+#nivelArea1,
+#nivelArea2,
+#nivelArea3,
+#nivelArea4,
+#nivelArea5,
+#nivelArea6,
+#nivelAreaGral {
+  color: #003456;
+  font-weight: bolder;
+  font-size: 22px;
+}
+
+.col h2 {
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.resulGral{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.noShow{
+  display: none;
+}
+
+.show{
+  display: block;
+}
